@@ -1,6 +1,7 @@
 :root {
-    --primary: #f0a500;
-    --primary-dark: #cf8d00;
+    --primary: #76c945;
+    /* Logo Green */
+    --primary-dark: #2d5a27;
     --bg-dark: #0f1215;
     --bg-card: rgba(255, 255, 255, 0.05);
     --text-main: #ffffff;
@@ -90,8 +91,9 @@ nav.scrolled {
     font-size: 4rem;
     margin-bottom: 20px;
     font-weight: 800;
-    background: linear-gradient(45deg, #ffffff, #f0a500);
+    background: linear-gradient(45deg, #ffffff, var(--primary));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -154,9 +156,69 @@ section {
     color: var(--text-muted);
 }
 
+/* Solutions Section */
+.solutions-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.solutions-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.solutions-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.solutions-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.solution-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.solution-tags span {
+    padding: 8px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--primary);
+}
+
 /* About Section */
 .about {
-    background: rgba(240, 165, 0, 0.03);
+    background: rgba(118, 201, 69, 0.03);
+    /* Primary with low opacity */
+}
+
+.logo-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 40px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-logo {
+    max-width: 100%;
+    mix-blend-mode: multiply;
 }
 
 .about-content {
@@ -214,9 +276,11 @@ footer {
     .hero-content h1 {
         font-size: 2.5rem;
     }
+
     .nav-links {
         display: none;
     }
+
     section {
         padding: 60px 5%;
     }
