@@ -1,0 +1,223 @@
+:root {
+    --primary: #f0a500;
+    --primary-dark: #cf8d00;
+    --bg-dark: #0f1215;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --font-family: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Utility */
+.glass {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+nav.scrolled {
+    background: rgba(15, 18, 21, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(15, 18, 21, 0.7), rgba(15, 18, 21, 0.7)), url('assets/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 0 5%;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    background: linear-gradient(45deg, #ffffff, #f0a500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: var(--text-muted);
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background: var(--primary);
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: transform 0.3s, background 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    background: var(--primary-dark);
+}
+
+/* Sections */
+section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    padding: 40px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+/* About Section */
+.about {
+    background: rgba(240, 165, 0, 0.03);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    padding: 50px 10%;
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .nav-links {
+        display: none;
+    }
+    section {
+        padding: 60px 5%;
+    }
+}
