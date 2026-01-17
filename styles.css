@@ -52,10 +52,19 @@ nav.scrolled {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
     color: var(--primary);
+    text-transform: uppercase;
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
@@ -156,6 +165,50 @@ section {
     color: var(--text-muted);
 }
 
+/* Products Section */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.product-card {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    /* ensures the whole badge is visible */
+    border-radius: 50%;
+    /* Makes the container circular */
+    margin-bottom: 20px;
+    /* Optional: if there's still a white box, this ensures it's circular */
+    background-color: transparent;
+}
+
+.product-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.product-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
 /* Solutions Section */
 .solutions-container {
     display: flex;
@@ -236,6 +289,16 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.contact-info a {
+    color: var(--text-main);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--primary);
 }
 
 .footer-logo {

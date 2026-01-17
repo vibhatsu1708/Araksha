@@ -8,17 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.0">
 </head>
 
 <body>
     <nav id="navbar">
-        <div class="logo">ARA'ksha</div>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo" class="nav-logo">
+            ARA'ksha
+        </div>
         <div class="nav-links">
             <a href="#home">Home</a>
+            <a href="#vision">Vision</a>
             <a href="#mission">Mission</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">About us</a>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact us</a>
         </div>
         <a href="#contact" class="cta-button" style="padding: 10px 25px; font-size: 0.9rem;">Get in Touch</a>
     </nav>
@@ -29,13 +35,66 @@
             <p>Safety is more than a requirement—it's a commitment to people, productivity, and the future of every
                 workplace.</p>
             <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-                <a href="#mission" class="cta-button">Explore Our Mission</a>
+                <a href="#products" class="cta-button">Explore Our Products</a>
                 <span
                     style="color: var(--primary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8;">The
                     website is under construction</span>
             </div>
         </div>
     </header>
+
+    <section id="products" class="products">
+        <h2 class="section-title reveal">Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card glass reveal">
+                <img src="assets/img3.jpg" alt="Eye & Face Protection" class="product-img">
+                <h3>Eye & Face Protection</h3>
+                <p>Protecting vision is protecting life. ARA’ksha’s eye and face protection range safeguards against
+                    dust, impact, chemicals, heat, and airborne hazards. Designed for clarity, comfort, and
+                    compatibility with helmets and respirators, our solutions ensure workers stay protected, focused,
+                    and compliant in the toughest industrial environments.</p>
+            </div>
+            <div class="product-card glass reveal">
+                <h3>Head Protection</h3>
+                <p>Built to protect where it matters most. ARA’ksha’s head protection solutions guard against impact,
+                    falling objects, and workplace hazards across demanding industrial environments. Engineered for
+                    strength, comfort, and all-day wear, our safety helmets deliver reliable protection while ensuring
+                    compliance, confidence, and uninterrupted productivity on site.</p>
+            </div>
+            <div class="product-card glass reveal">
+                <h3>Hand Protection</h3>
+                <p>From precision tasks to heavy-duty handling, ARA’ksha’s hand protection range shields hands against
+                    cuts, abrasions, chemicals, heat, and impact—delivering grip, comfort, and confidence across every
+                    industrial application.</p>
+            </div>
+            <div class="product-card glass reveal">
+                <img src="assets/img0.jpg" alt="Foot Protection" class="product-img">
+                <h3>Foot Protection</h3>
+                <p>Designed to stand up to the toughest conditions, ARA’ksha’s foot protection safeguards against
+                    impact, compression, slips, heat, and electrical hazards. Built for durability and all-day comfort,
+                    our safety footwear ensures stable footing, reliable protection, and confidence across every
+                    industrial environment.</p>
+            </div>
+            <div class="product-card glass reveal">
+                <img src="assets/img1.jpg" alt="Workwear" class="product-img">
+                <h3>Safety, Sanitation & Hygiene Workwear</h3>
+                <p>ARA’ksha’s workwear is engineered to protect people while maintaining the highest standards of
+                    safety, sanitation, and hygiene. Designed for industrial, chemical, healthcare, and controlled
+                    environments, our garments provide barrier protection against dust, splashes, contaminants, and
+                    workplace hazards—while ensuring comfort, breathability, and ease of movement. Durable, compliant,
+                    and purpose-built, our workwear helps maintain clean operations, protects personnel, and supports
+                    safe, hygienic working conditions at all times.</p>
+            </div>
+            <div class="product-card glass reveal">
+                <img src="assets/img2.jpg" alt="Respiratory Protection" class="product-img">
+                <h3>Respiratory Protection (SCBA & PAPR)</h3>
+                <p>When air quality becomes critical, ARA’ksha’s respiratory protection delivers uncompromised safety.
+                    Our range of SCBA, PAPR, and respirators protects against toxic gases, dust, fumes, and
+                    oxygen-deficient environments—ensuring reliable airflow, wearer comfort, and compliance in the most
+                    hazardous industrial and emergency conditions.</p>
+            </div>
+        </div>
+    </section>
 
     <section id="mission" class="mission">
         <h2 class="section-title reveal">Our Core Mission</h2>
@@ -105,9 +164,11 @@
             style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 30px; text-align: left;">
             <div class="contact-info">
                 <h3>Contact Us</h3>
-                <p><strong>Ashish K Mistry</strong> (Co-Owner)</p>
-                <p>Phone: <a href="tel:+919320622653">+91 9320 622 653</a></p>
-                <p>Email: <a href="mailto:ashish@arakshasafety.in">ashish@arakshasafety.in</a></p>
+                <p><strong>Ashish K Mistry</strong></p>
+                <p><strong>Rekha Tayade</strong></p>
+                <p><strong>Ajit Mistry</strong></p>
+                <p style="margin-top: 15px;">Phone: <a href="tel:+919320622653">+91 9320 622 653</a></p>
+                <p>Email: <a href="mailto:Sales@arakshasafety.in">Sales@arakshasafety.in</a></p>
                 <p>Website: <a href="https://www.arakshasafety.in">www.arakshasafety.in</a></p>
             </div>
 
@@ -121,16 +182,16 @@
                         Kamothe 410209, India
                     </div>
                     <div class="address-box">
-                        <strong>Warehouse:</strong><br>
-                        9, building 2B, Rajprabaha Landmark Industrial estate,<br>
-                        Bhoidapada, Sativali Road,<br>
-                        Vasai E, 401208, India
-                    </div>
-                    <div class="address-box">
-                        <strong>Branch:</strong><br>
+                        <strong>Branch Office:</strong><br>
                         703, building no 6, Sector 2,<br>
                         Shanti Garden, Mira Road,<br>
                         Thane, 401107 India
+                    </div>
+                    <div class="address-box">
+                        <strong>Branch + Stores:</strong><br>
+                        9, building 2B, Rajprabaha Landmark Industrial estate,<br>
+                        Bhoidapada, Sativali Road,<br>
+                        Vasai E, 401208, India
                     </div>
                 </div>
             </div>
@@ -144,7 +205,7 @@
             &copy; 2026 ARA'ksha. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1.0"></script>
 </body>
 
 </html>
